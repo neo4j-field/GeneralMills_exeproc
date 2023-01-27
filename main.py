@@ -33,7 +33,7 @@ if __name__ == '__main__':
         print('next we need to iterate over each procedure, do string interpolation to create the query, and run it against the database')
         for procedure in result:
             cypher_query = f'GRANT EXECUTE PROCEDURE {procedure} ON DBMS TO DataScienceUser'
-            print(cypher_query)
+            session.execute_write(cypher_query)
 
 
 
